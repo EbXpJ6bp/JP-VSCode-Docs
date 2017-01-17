@@ -116,7 +116,7 @@ VS Code の設定変更は `settings.json` ファイルを編集する形式と�
 
 ### 設定の検索 (Search settings)
 
-**Default Settings** を表示する大きな理由の1つは、ユーザーが設定を検索及び検出するためです。これを容易にするために、設定を検索できる大きな検索バーを追加しました。検索に一致する設定の強調表示に加えて、一致しない設定を除外します。これにより、設定を素早く簡単に見つけることができます。
+**Default Settings** を表示する大きな理由の1つは、ユーザーが設定を検索及び検出するためです。これを容易にするために、設定を検索できる大きな検索バーを追加しました。検索に一致する設定の強調表示に加えて、一致しない設定を除外します。これにより、設定を素早く簡単に見つけることができます。<!--text lint無視-->
 
 ![Search Settings](https://code.visualstudio.com/images/1_8_search-settings.gif)
 
@@ -131,7 +131,6 @@ VS Code の設定変更は `settings.json` ファイルを編集する形式と�
 **Default Settings** と `settings.json` エディタ内で、設定をすばやくコピーまたは更新するのに役立つアクションを導入しました。あらかじめ選択可能な値を持っている項目については、値をキーボードから入力することなく選択で入力することが可能です。
 
 ![Settings Groups](https://code.visualstudio.com/images/1_8_quick-edit-settings.gif)
-
 
 ### 設定エディタのグループ化 (One Side by Side Settings editor)
 
@@ -149,7 +148,7 @@ VS Code の設定変更は `settings.json` ファイルを編集する形式と�
 
 ```json
   { "key": "enter", "command": "type",
-                    "args": { "text": "Hello World" }, 
+                    "args": { "text": "Hello World" },
                     "when": "editorTextFocus" }
 ```
 
@@ -158,7 +157,8 @@ VS Code の設定変更は `settings.json` ファイルを編集する形式と�
 ### 推奨されるキーマップ拡張 (Recommended keymap extensions)
 
 一般的なエディタや IDE で採用されているフルセットのキーバインディングを VS Code でも利用可能になるキーマップ拡張機能リストを表示するコマンドを追加しました。
-リストを表示するには、**File** > **Preferences** > **Keymap Extensions** を使用します。
+
+リストを表示するには、**[ファイル(F)]** > **基本設定(P)** > **キーマップ拡張機能(K)** を使用します。
 
 ![Recommended keymap extensions](https://code.visualstudio.com/images/1_8_recommended-keymap-extensions.png)
 
@@ -166,7 +166,7 @@ VS Code の設定変更は `settings.json` ファイルを編集する形式と�
 
 ### 選択範囲メニューの追加 (Selection menu)
 
-メニューバーに "選択範囲" メニューを追加し、良く利用される選択操作と複数選択操作に容易にアクセスできるようにしました。
+メニューバーに **[選択範囲(S)]** メニューを追加し、良く利用される選択操作と複数選択操作に容易にアクセスできるようになりました。 <!--text lint無視-->
 
 ![Selection menu](https://code.visualstudio.com/images/1_8_selection-menu.png)
 
@@ -176,7 +176,7 @@ VS Code の設定変更は `settings.json` ファイルを編集する形式と�
 
 ### Git clone
 
-Git リポジトリをクローンし、VS Code で開くための新しいコマンドが追加されました。**Command Palette** から、`Git：Clone` を検索することで実行することができます。
+Git リポジトリをクローンし、VS Code で開くための新しいコマンドを追加しました。**コマンド パレット** から、`Git：Clone` を検索することで実行することができます。
 
 ### 新しく追加されたエディタ設定 (New editor settings)
 
@@ -207,17 +207,17 @@ Sublime Text ユーザーがよく利用する 4 つの新しいコマンドを�
 - 大文字に変換 (Transform to Uppercase) - `editor.action.transformToUppercase`
 - 小文字に変換 (Transform to Lowercase) - `editor.action.transformToLowercase`
 
-これらのコマンドは、デフォルトではキーボードショートカットにバインドされていませんが、**Command Palette** から呼び出すことも可能です。
+これらのコマンドは、デフォルトではキーボードショートカットにバインドされていませんが、**コマンド パレット** から呼び出すことも可能です。
 
 ## スニペット (Snippets)
 
 ### スニペット変数 (Snippet Variables)
 
-カスタムスニペットで、変数を使用できるようになりました。 変数の構文は、単純な変数の場合は `$name` となり、デフォルト値を持つ変数の場合は `${name:default}` のようになります。変数の中が空の文字列、または、値が存在する場合は、それらがデフォルト値として評価されます。変数が不明な場合は、その変数をプレースホルダとして挿入します。
+カスタムスニペットで、変数を使用できるようになりました。 変数の構文は、単純な変数の場合は `$name` となり、デフォルト値を持つ変数の場合は `${name:default}` のようになります。変数の中が空の文字列、または値が存在する場合は、それらがデフォルト値として評価します。変数が不明な場合は、その変数をプレースホルダとして挿入します。
 
 次の変数を使用できます:
 
-* `TM_SELECTED_TEXT` - 現在選択されているテキストまたは空の文字列
+* `TM_SELECTED_TEXT` - 現在選択しているテキストまたは空の文字列
 * `TM_CURRENT_LINE` - 現在の行の内容
 * `TM_CURRENT_WORD` - カーソルが置かれている単語の内容または空の文字列
 * `TM_LINE_INDEX` - zero-index に基づく行番号
@@ -226,7 +226,7 @@ Sublime Text ユーザーがよく利用する 4 つの新しいコマンドを�
 * `TM_DIRECTORY` - 現在のドキュメントのディレクトリ
 * `TM_FILEPATH` - 現在のドキュメントの完全なファイルパス
 
-以下は、選択したテキストをシングルクォートで囲むスニペットの例です。テキストが選択されていない場合は、`type_here`-プレースホルダが挿入されます。
+以下は、選択したテキストをシングルクォートで囲むスニペットの例です。テキストを選択していない場合は、`type_here`-プレースホルダが挿入されます。
 
 ```json
 "in quotes": {
@@ -244,7 +244,7 @@ JSON 言語サービスでは、JSON スキーマを使用して JSON ドキュ�
 
 ### HTML での JavaScript 言語サポート (JavaScript language support in HTML)
 
-HTML に埋め込まれた JavaScript のコーディング支援機能が復活しました！コード補完、DOM の署名ヘルプ、JQuery API、検証、ホバー、参照の検索と定義への移動、シンボルの強調表示と概要 (Ctrl + Shift + o)、フォーマットなどの機能を利用できます。この言語サポートは同じファイル内の定義のみに有効なことに注意してください。
+HTML に埋め込まれた JavaScript のコーディング支援機能が復活しました！コード補完、DOM の署名ヘルプ、JQuery API、検証、ホバー、参照の検索と定義への移動、シンボルの強調表示と概要 (Ctrl + Shift + o)、フォーマットなどの機能を利用できます。この言語サポートは同じファイル内の定義のみで有効なことに注意してください。
 
 ![JavaScript editing in HTML](https://code.visualstudio.com/images/1_8_javascript-in-html.gif)
 
@@ -252,7 +252,7 @@ HTML に埋め込まれた JavaScript のコーディング支援機能が復活
 
 CSS 言語サポートでは、新しい [@apply ルール](https://tabatkins.github.io/specs/css-apply-rule/) を処理できるようになりました。
 
-特に属性で定義されたスタイルを持つ HTML での CSS サポートも改善されています。
+特に属性で定義されたスタイルを持つ HTML での CSS サポートが改善されました。
 
 ![CSS in HTML attributes](https://code.visualstudio.com/images/1_8_css-in-html.png)
 
@@ -270,7 +270,7 @@ VS Code における JavaScript サポートは TypeScript によって強化さ
 
 ### Markdown プレビューの改善 (Markdown preview improvements)
 
-Markdown プレビューを改善するためのいくつかの新しい設定が追加されました。
+Markdown プレビューを改善するためのいくつかの新しい設定を追加しました。
 
 * `markdown.previewFrontMatter` - デフォルトの動作として、Markdown プレビュー時に YAML front matter セクションを隠すようになりました。YAML front matter もあわせてプレビュー上で確認したい場合は `show` に設定してください
 
@@ -390,7 +390,7 @@ Node.js バージョンが 6.3 より古い場合は、`古い`デバッガで�
 正確なルールは次のとおりです:
 
 * スキップ対象となるファイルにステップインした場合、そこで停止することはありません。スキップされたファイルにない次の実行されたラインで停止します
-* スローされた例外を破棄するオプションを設定した場合、スキップ対象となるファイルからスローされた例外は中断されることはありません
+* スローされた例外を破棄するオプションを設定した場合、スキップ対象となるファイルからスローされた例外が中断されることはありません
 * スキップ対象となるファイルにブレークポイントを設定した場合、そのブレークポイントで停止し、そのブレークポイントからステップアウトするまでステップを進めることができます。このポイントから通常のスキップ動作が再開されます。
 
 この機能は、`node`、 `node2` および [Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) デバッガで使用できます。
@@ -484,15 +484,15 @@ text document では、指定された位置からの [word-range](https://githu
 
 `OutputEvent` タイプは、構造化オブジェクトをデバッグコンソールに送信する機能としてサポートされ、VS Code で拡張オブジェクトとしてレンダリングされるようになりました。詳細は[こちら](https://github.com/Microsoft/vscode-debugadapter-node/issues/79)をご覧ください。
 
-新しい `RestartRequest` がデバッグプロトコルに追加されました。VS Code デバッガ UI に、デバッグアダプタを終了および再起動する `Restart` アクションの実装が必要なくなり、代わりに `RestartRequest` をアダプタに送信します。 詳細は[こちら](https://github.com/Microsoft/vscode/issues/14189)をご覧ください。
+新しい `RestartRequest` をデバッグプロトコルに追加しました。VS Code デバッガ UI に、デバッグアダプタを終了および再起動する `Restart` アクションの実装が必要なくなり、代わりに `RestartRequest` をアダプタに送信します。 詳細は[こちら](https://github.com/Microsoft/vscode/issues/14189)をご覧ください。
 
 ## その他 (Miscellaneous)
 
 ### Electron のアップデート (Electron update)
 
-今回のリリースでは、Electron を 1.3.x から 1.4.x にアップデートしました。これにより、Chrome はバージョン 52 から 53 へアップデートされます。また、このアップデートによりは、100％ 以上の DPI で VS Code が動作している場合、Windows におけるフォントレ表示のぼやけが軽減されるとユーザーから報告を受けています。
+今回のリリースでは、Electron を 1.3.x から 1.4.x にアップデートしました。これにより、Chrome はバージョン 52 から 53 へアップデートされます。また、このアップデートによりは、100％ 以上の DPI で VS Code が動作している場合、Windows におけるフォントレ(タリング?)表示のぼやけが軽減されるとユーザーから報告を受けています。
 
-アップデートのもう 1 つの利点として、Windows が高コントラストモードで動作していることを検出したときに VS Code でも高コントラストテーマを自動的に有効にできることです。 VS Code は、Windows がそのように設定されている場合はハイコントラストモードで起動し、動作中の VS Code は、Windows のコントラストモードを変更することでハイコントラストモードに切り替わります。
+アップデートのもう1つの利点として、 Windows が高コントラストモードで動作していることを検出したとき、高コントラストテーマを自動で有効にできることです。起動中でもWindows でモードを変更するとハイコントラストモードに切り替わります。
 
 ### Language Server Protocol
 
@@ -545,7 +545,7 @@ Key|Command|Command id
 
 ## Thank You
 
-最後になりましたが、VS Code をより良いものにするために協力してくれた次の方々に多大なる感謝を込めて:
+最後になりましたが、VS Code をより良いものへするために協力してくれた次の方々に多大なる感謝を込めて:
 
 * [@anantoghosh](https://github.com/anantoghosh):  Fix Incorrect links in "vscode namespace API" Doc [PR #15904](https://github.com/Microsoft/vscode/pull/15904)
 * [Christian Alexander (@ChristianAlexander)](https://github.com/ChristianAlexander):  Fix #14135 - Allow files with merge status to be staged [PR #14788](https://github.com/Microsoft/vscode/pull/14788)
