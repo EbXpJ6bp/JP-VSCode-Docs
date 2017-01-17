@@ -2,7 +2,7 @@
 
 ## 1.8.1 Recovery Build
 
-年末までにいくつかの[重要な問題](https://github.com/Microsoft/vscode/issues?q=is%3Aissue+milestone%3A%22November+Recovery+2016%22+is%3Aclosed) に取り組むために、1.8.1 リカバリビルドをリリースしました。早期に問題発見いただきありがとうございました。
+年末までにいくつかの[重要な問題](https://github.com/Microsoft/vscode/issues?q=is%3Aissue+milestone%3A%22November+Recovery+2016%22+is%3Aclosed)へ取り組むために、1.8.1 リカバリビルドをリリースしました。 早期に問題発見いただきありがとうございました。
 
 * Fixed scrolling in large minified files ([#17208](https://github.com/Microsoft/vscode/issues/17208))
 * Resolved an issue with Copy command in certain contexts ([#17232](https://github.com/Microsoft/vscode/issues/17232))
@@ -10,7 +10,7 @@
 * Fixed Quick Outline in Default Keyboard Shortcuts ([#17376](https://github.com/Microsoft/vscode/issues/17376))
 * Removed 'Focus Default Settings' command from Command Palette ([#17468](https://github.com/Microsoft/vscode/issues/17468))
 
-VS Code は自動的に 1.8.1 にアップデートされますが、以下のリンクから直接リリースをダウンロードすることも可能です:
+VS Code は自動的に 1.8.1 にアップデートしますが、以下のリンクから直接リリースをダウンロードすることも可能です:
 
 Downloads: [Windows](https://vscode-update.azurewebsites.net/1.8.1/win32/stable) | [Mac](https://vscode-update.azurewebsites.net/1.8.1/darwin/stable) | Linux 64-bit: [.tar.gz](https://vscode-update.azurewebsites.net/1.8.1/linux-x64/stable) [.deb](https://vscode-update.azurewebsites.net/1.8.1/linux-deb-x64/stable) [.rpm](https://vscode-update.azurewebsites.net/1.8.1/linux-rpm-x64/stable) | Linux 32-bit: [.tar.gz](https://vscode-update.azurewebsites.net/1.8.1/linux-ia32/stable) [.deb](https://vscode-update.azurewebsites.net/1.8.1/linux-deb-ia32/stable) [.rpm](https://vscode-update.azurewebsites.net/1.8.1/linux-rpm-ia32/stable)
 
@@ -18,59 +18,62 @@ Downloads: [Windows](https://vscode-update.azurewebsites.net/1.8.1/win32/stable)
 
 Visual Studio Code 11 月リリース版へようこそ。 このリリースではいくつかの重要な更新があり、ハイライトは次のとおりです:
 
-* **[Hot Exit](#hot-exit)** - 未保存のファイル変更を失うことが無くなりました
+* **[Hot Exit](#hot-exit)** - 未保存のファイル変更を失いません
 * **[Focus on Your Code](#focus-on-your-code)** - 禅モード、設定可能なアクティビティバーなどの機能強化
 * **[Settings improvements](#settings)** - VS Code を設定するための新しい設定画面
 * **[New Selection menu](#selection-menu)** - エディタ上での選択コマンドをメニューに配置
-* **[Faster Text Search ](#text-search-performance)** - プロジェクトの規模に関わらず、より高速にコードを検索可能に
-* **[Snippet authoring](#snippets)** - コードスニペットで変数を使用可能に
-* **[Keyboard shortcuts](#keyboard-shortcuts)** - コマンド引数を使用したカスタムショートカットを作成可能、人気のキーマップ拡張機能をメニューからアクセス可能に
-* **[JavaScript IntelliSense in HTML](#javascript-language-support-in-html)** - HTML ファイルで JavaScript 言語をフルサポート可能に
-* **[UI for Multitarget Debugging](#multitarget-debugging)** - 複数のデバッグセッションを実行可能に
-* **[TypeScript 2.1](#typescript-update)** - 最新の TypeScript アップデート採用による言語サポートの改善
-* **[JavaScript](#javascript)** - Object Rest/Spread をサポート
+* **[Faster Text Search ](#text-search-performance)** - プロジェクトの規模に関係なく、より高速にコードを検索
+* **[Snippet authoring](#snippets)** - コードスニペットで変数を利用
+* **[Keyboard shortcuts](#keyboard-shortcuts)** - コマンド引数を使用したカスタムショートカットを作成、人気のキーマップ拡張機能をメニューからアクセス
+* **[JavaScript IntelliSense in HTML](#javascript-language-support-in-html)** - HTML 内の JavaScript 言語サポート
+* **[UI for Multitarget Debugging](#multitarget-debugging)** - 複数のデバッグセッション実行
+* **[TypeScript 2.1](#typescript-update)** - 最新のTypeScriptアップデート採用による言語サポート改善
+* **[JavaScript](#javascript)** - Object Rest/Spread サポート
 
-VS Code の重要な更新に関連するアップデート情報は、リリースノートの次のセクションに配置されています。その他のアップデートは、次のとおりです:
+VS Code の重要な更新に関連するアップデート情報は、リリースノートの次のセクションに配置しています。その他のアップデートは、次のとおりです:
 
-* **[Workbench](#workbench)** - 新しいビューピッカー、統合ターミナルの改良、macOS ではウィンドウタイトルへテーマを反映可能に
+* **[Workbench](#workbench)** - 新しいビューピッカー、統合ターミナルの改良、macOS でのウィンドウタイトルテーマ変更設定
 * **[Settings](#settings)** - 設定項目の検索、値編集の簡易化、キーマップ拡張機能の検索
-* **[Editor](#editor)** - Git クローン、新しいエディタ設定、Sublime Text 機能との互換性
-* **[Languages](#languages)** - CSS の apply ルール、Markdown プレビューのカスタマイズ、TSLint と ESLint 拡張機能をアップデート
-* **[Debugging](#debugging)** - IntelliSense により、スニペットとして簡単に launch configurations を追加可能に
-* **[Node.js Debugging](#node-debugging)** - Just My Code、ファイルから環境変数を読み込み、sourcemap のヘルプ
+* **[Editor](#editor)** - Git Clone(command)、新しいエディタ設定、Sublime Text 機能との互換性
+* **[Languages](#languages)** - CSS apply 、Markdown プレビューのカスタマイズ、TSLint と ESLint 拡張機能をアップデート
+* **[Debugging](#debugging)** - IntelliSense介して簡単に launch configurations 設定
+* **[Node.js Debugging](#node-debugging)** - Just-My-Code、ファイルから環境変数を読み込み、sourcemap のヘルプ
 * **[Extension Authoring](#extension-authoring)** - 厳密な Null チェック、スニペット補完、デバッガ拡張機能の更新
 
 ## ワークベンチ (Workbench)
 
 ### Hot Exit
 
-VS Code は、終了時に未保存のファイルの変更も記憶するようになり、これは `Hot Exit` と呼ばれる機能があらたに追加されました。Hot Exit が有効になるのは次のような時です:
+`Hot Exit` という機能を新たに追加しました。 VS Code は、以下の時に未保存の変更を記憶します。
+
 - すべてのウィンドウ (インスタンス) が閉じられたとき
 - Mac 上で、アプリケーションを終了したとき
-- ウィンドウの再読込 (Reload Windows) これで、拡張機能をリロードするための保存が不要になります！
+- ウィンドウの再読み込みを行ったとき (拡張機能の更新時、未保存を気にする必要がありません)
 
-Hot Exit 後に VS Code を次に起動すると、バックアップされたすべてのワークスペースおよびファイルがリストアされます。 Hot Exitの有効/無効 (`files.hotExit` 設定) にかかわらず、VS Code がクラッシュした場合にファイルを復元する機能もあります。Hot Exit の実装や背景および将来の予定などについては、[ブログの記事](http://code.visualstudio.com/blogs/2016/11/30/hot-exit-in-insiders)を参照してください。
+Hot Exit 後に VS Code を次に起動すると、バックアップされたすべてのワークスペースおよびファイルがリストアされます。 Hot Exitの有効/無効 (`files.hotExit` 設定) に関係なく、VS Code がクラッシュした場合にファイルを復元する機能もあります。Hot Exit の実装や背景および将来の予定などについては、[ブログの記事](http://code.visualstudio.com/blogs/2016/11/30/hot-exit-in-insiders)を参照してください。
 
-### ビュー・ピッカー (View Picker)
+### ビューピッカー (View Picker)
 
-ビュー、パネル、出力チャンネル、およびターミナルを表示するための新しいピッカーが追加され、隠れているビューを簡単に開くことができるようになりました。**Open View** コマンドを使用するか、**Quick Open** 上で `view` を入力したあとに `space` (単語ではなく空白のスペース)を入力することで開くことができます。
+ビュー、パネル、出力チャンネル、及びターミナルを表示する新しいピッカーが追加され、隠れているビューを簡単に開くことができるようになりました。 **Open View** コマンドを使用するか、 **Quick Open** 上で `view` を入力したあとに `space` (半角スペース)を入力することで開くことができます。
 
 ![View Picker](https://code.visualstudio.com/images/1_8_view-picker.png)
 
-Windows と Mac では、`kbstyle(Ctrl+Q)` を押すとピッカーが表示されます。 Linux では、必要に応じてキーバインドを再割り当てする必要があります(Linux 上で `kbstyle(Ctrl+Q)` がアプリケーションの終了などに割り当てられている可能性がある場合） `kbstyle(Ctrl+Q)` を押し、`kbstyle(Ctrl)` キーを押したままにし、`kbstyle(Q)` を押すと、リストから項目にジャンプし、キーを離した後に選択したビューを開くことができます。
+ピッカーを開き、 `kbstyle(Ctrl)`を保持したまま`kbstyle(Q)`を押すことで項目を選択できます。キーを離したときに選択したビューが開きます。
+
+Windows と Mac では、`kbstyle(Ctrl+Q)` を押すとピッカーを表示します。 Linux は標準でこのコマンドを、アプリケーション終了に割り当てているため、必要に応じて変更をする必要があります。
 
 ### 統合ターミナルの改善 (Terminal improvements)
 
 統合ターミナルにいくつかの改良が行われました:
 
-- Windows におけるターミナル上でのコピーと貼り付けのキーバインディングは、それぞれ `kbstyle(Ctrl+C)`（テキストが選択されている場合）および `kbstyle(Ctrl+V)` に変更されました
+- Windows におけるターミナル上でのコピーと貼り付けのキーバインディングは、それぞれ `kbstyle(Ctrl+C)`（テキストを選択している場合） `kbstyle(Ctrl+V)` に変更されました
 - スクロールアップさせている際、ターミナルが出力を受け取っても最下部にスクロールしなくなりました
 - ターミナルがフォーカスを持っている場合、`kbstyle(Cmd+K)` によりターミナルをクリアできるようになりました
-- 新しい `terminal.integrated.scrollback` 設定により、ターミナル上でスクロールバック可能な行数を変更することが可能になりまた
+- 新しい `terminal.integrated.scrollback` 設定により、ターミナル上でスクロールバックを行える行数を設定できるようになりました
 
 ### Mac: タイトルバーにもテーマを反映 (Mac: Custom themed title)
 
-macOS 版の VS Code では、テーマのカラーをタイトルバーにも反映できるように、独自のカスタムタイトルバーを内部的に生成するようになりました。この動作は、新しい`window.titleBarStyle` 設定で変更することができ、デフォルトは `custom` が設定されていますが、値を `native` に設定し再起動することで従来と同じタイトルバーに変更することができます。
+macOS 版の VS Code では、テーマのカラーをタイトルバーにも反映できるように、独自のカスタムタイトルバーを内部的に生成するようになりました。この動作は新しい `window.titleBarStyle` 設定で変更することができ、デフォルトは `custom` が設定されていますが、値を `native` に設定し再起動することで従来と同じタイトルバーに変更することができます。
 
 ## コードに集中するための機能 (Focus on your code)
 
