@@ -8,7 +8,7 @@
 * Resolved an issue with Copy command in certain contexts ([#17232](https://github.com/Microsoft/vscode/issues/17232))
 * Fixed an issue with saving files on a mounted drive ([#17345](https://github.com/Microsoft/vscode/issues/17345))
 * Fixed Quick Outline in Default Keyboard Shortcuts ([#17376](https://github.com/Microsoft/vscode/issues/17376))
-* Removed 'Focus Default Settings' command from Command Palette ([#17468](https://github.com/Microsoft/vscode/issues/17468))
+* Removed 'Focus 既定の設定' command from Command Palette ([#17468](https://github.com/Microsoft/vscode/issues/17468))
 
 VS Code は自動的に 1.8.1 にアップデートしますが、以下のリンクから直接リリースをダウンロードすることも可能です:
 
@@ -27,7 +27,7 @@ Visual Studio Code 11 月リリース版へようこそ。 このリリースで
 * **[Keyboard shortcuts](#keyboard-shortcuts)** - コマンド引数を使用したカスタムショートカットを作成、人気のキーマップ拡張機能をメニューからアクセス
 * **[JavaScript IntelliSense in HTML](#javascript-language-support-in-html)** - HTML 内の JavaScript 言語サポート
 * **[UI for Multitarget Debugging](#multitarget-debugging)** - 複数のデバッグセッション実行
-* **[TypeScript 2.1](#typescript-update)** - 最新のTypeScriptアップデート採用による言語サポート改善
+* **[TypeScript 2.1](#typescript-update)** - 最新の TypeScript アップデート採用による言語サポート改善
 * **[JavaScript](#javascript)** - Object Rest/Spread サポート
 
 VS Code の重要な更新に関連するアップデート情報は、リリースノートの次のセクションに配置しています。その他のアップデートは、次のとおりです:
@@ -36,7 +36,7 @@ VS Code の重要な更新に関連するアップデート情報は、リリー
 * **[Settings](#settings)** - 設定項目の検索、値編集の簡易化、キーマップ拡張機能の検索
 * **[Editor](#editor)** - Git Clone(command)、新しいエディタ設定、Sublime Text 機能との互換性
 * **[Languages](#languages)** - CSS apply 、Markdown プレビューのカスタマイズ、TSLint と ESLint 拡張機能をアップデート
-* **[Debugging](#debugging)** - IntelliSense介して簡単に launch configurations 設定
+* **[Debugging](#debugging)** - IntelliSense 介して簡単に launch configurations 設定
 * **[Node.js Debugging](#node-debugging)** - Just-My-Code、ファイルから環境変数を読み込み、sourcemap のヘルプ
 * **[Extension Authoring](#extension-authoring)** - 厳密な Null チェック、スニペット補完、デバッガ拡張機能の更新
 
@@ -50,15 +50,15 @@ VS Code の重要な更新に関連するアップデート情報は、リリー
 - Mac 上で、アプリケーションを終了したとき
 - ウィンドウの再読み込みを行ったとき (拡張機能の更新時、未保存を気にする必要がありません)
 
-Hot Exit 後に VS Code を次に起動すると、バックアップされたすべてのワークスペースおよびファイルがリストアされます。 Hot Exitの有効/無効 (`files.hotExit` 設定) に関係なく、VS Code がクラッシュした場合にファイルを復元する機能もあります。Hot Exit の実装や背景および将来の予定などについては、[ブログの記事](http://code.visualstudio.com/blogs/2016/11/30/hot-exit-in-insiders)を参照してください。
+Hot Exit 後に VS Code を次に起動すると、バックアップされたすべてのワークスペースおよびファイルがリストアされます。 Hot Exitの有効-無効 (`files.hotExit` 設定) に関係なく、VS Code がクラッシュした場合にファイルを復元する機能もあります。Hot Exit の実装や背景および将来の予定などについては、[ブログの記事](http://code.visualstudio.com/blogs/2016/11/30/hot-exit-in-insiders)を参照してください。
 
 ### ビューピッカー (View Picker)
 
-ビュー、パネル、出力チャンネル、及びターミナルを表示する新しいピッカーが追加され、隠れているビューを簡単に開くことができるようになりました。 **Open View** コマンドを使用するか、 **Quick Open** 上で `view` を入力したあとに `space` (半角スペース)を入力することで開くことができます。
+ビュー, パネル, 出力チャンネル, ターミナルを表示する新しいピッカーが追加され、隠れているビューを簡単に開くことができるようになりました。 **Open View** コマンドを使用するか、 **Quick Open** 上で `view` を入力したあとに `space` (半角スペース)を入力することで開くことができます。
 
 ![View Picker](https://code.visualstudio.com/images/1_8_view-picker.png)
 
-ピッカーを開き、 `kbstyle(Ctrl)`を保持したまま`kbstyle(Q)`を押すことで項目を選択できます。キーを離したときに選択したビューが開きます。
+ピッカーを開いたままにします。 `kbstyle(Ctrl)` を保持したまま `kbstyle(Q)` を押すことで項目を選択できます。キーを離したときに選択したビューが開きます。
 
 Windows と Mac では、`kbstyle(Ctrl+Q)` を押すとピッカーを表示します。 Linux は標準でこのコマンドを、アプリケーション終了に割り当てているため、必要に応じて変更をする必要があります。
 
@@ -73,7 +73,7 @@ Windows と Mac では、`kbstyle(Ctrl+Q)` を押すとピッカーを表示し�
 
 ### Mac: タイトルバーにもテーマを反映 (Mac: Custom themed title)
 
-macOS 版の VS Code では、テーマのカラーをタイトルバーにも反映できるように、独自のカスタムタイトルバーを内部的に生成するようになりました。この動作は新しい `window.titleBarStyle` 設定で変更することができ、デフォルトは `custom` が設定されていますが、値を `native` に設定し再起動することで従来と同じタイトルバーに変更することができます。
+macOS 版の VS Code で、テーマのカラーをタイトルバーにも反映できるように、独自のカスタムタイトルバーを内部的に生成するようになりました。この動作は新しい `window.titleBarStyle` 設定で変更することができます。デフォルトは `custom` が設定されていますが、値を `native` に設定し再起動することで従来と同じタイトルバーに変更することができます。
 
 ## コードに集中するための機能 (Focus on your code)
 
@@ -81,14 +81,15 @@ macOS 版の VS Code では、テーマのカラーをタイトルバーにも�
 
 ### 禅モード (Zen Mode)
 
-ある[ユーザーからのリクエスト](https://github.com/Microsoft/vscode/issues/12940)により、VS Code に `禅 (Zen) モード` を追加しました。 Zen モードでは、エディタ以外のすべての UI (アクティビティバー、ステータスバー、サイドバー、パネル)を隠し、フルスクリーン表示にすることでコーディングに集中することができます。
-Zen モード切り替えは、**[表示(V)]** -> **コマンド パレット(C)**、 `kbstyle(Ctrl+K Z)`で行います。 Zen モード終了は `kbstyle(Escape)`を2回押します。 Zen モードそのものを無効化したい場合 `workbench.action.toggleZenMode` 設定で変更することができます。
+ある[ユーザーからのリクエスト](https://github.com/Microsoft/vscode/issues/12940)により、 VS Code に `禅 (Zen) モード` を追加しました。 Zen モードでは、エディタ以外のすべての UI (アクティビティバー, ステータスバー, サイドバー, パネル)を隠し、フルスクリーン表示にすることでコーディングに集中することができます。
+
+Zen モード切り替えは、**[表示(V)]** -> **コマンド パレット(C)**、 `kbstyle(Ctrl+K Z)` で行います。 Zen モード終了は `kbstyle(Escape)` を2回押します。 Zen モードそのものを無効化したい場合 `workbench.action.toggleZenMode` 設定で変更することができます。
 
 ### 設定可能なアクティビティバー (Configurable Activity Bar)
 <!-- 英文があまりに回りくどかったので 少し適当 -->
-アクティビティバーには、ファイルエクスプローラ、検索、デバッグなどにアクセスするためのホームがあります。多くの人は、ビューを素早く切り替えたり、ビューに関する情報(例えばGitアイコンではpush時のコミット数を示すバッジ)を表示したりするために使用します。
+アクティビティバーには、ファイルエクスプローラ, 検索, デバッグなどにアクセスするためのホームがあります。多くの人は、ビューを素早く切り替えたり、ビューに関する情報(例えばGitアイコンではpush時のコミット数を示すバッジ)を表示したりするために使用します。
 
-今回のリリースでは、新機能を追加してアクティビティバーを改善し、アプリケーションドックのような動作をするようになりました。また、これらの設定は VS Code再起動後も保持されます。
+今回のリリースでは、新機能を追加してアクティビティバーを改善し、アプリケーションドックのような動作をするようになりました。また、これらの設定は VS Code再起動後も保持します。
 
 まず、アクティビティバーそのものを隠すことが可能になりました。 新しく追加された `workbench.activityBar.visible` 設定を使用することで、アクティビティバーを隠すことができます。コマンドでは id `workbench.action.toggleActivityBarVisibility` がこれに当たります。
 
@@ -104,37 +105,36 @@ VS Codeのウィンドウのサイズが極端に小さくなり全てのビュ�
 
 ### タブ上の閉じるボタンを非表示にするための新しい設定 (New setting to hide Close buttons on Tabs)
 
-タブ上の閉じるボタンを非表示にする `workbench.editor.showTabCloseButton` 設定を新たに追加しました。 ダーティー・インジケータ (まだ、ファイルに保存されていないエディタを現すインジケータ)は同一の場所に表示されますが、使用中のタブをマウス操作により誤って閉じることはなくなります。
+タブ上の閉じるボタンを非表示にする `workbench.editor.showTabCloseButton` 設定を新たに追加しました。 ダーティー・インジケータ (まだ、ファイルに保存されていないエディタを現すインジケータ)は同一の場所に表示しますが、使用中のタブをマウス操作により誤って閉じることはなくなります。
 
 ## 設定 (Settings)
-<!--`default setting`は明らかに`既定の設定`ではあるけど微妙にわかりにくい-->
-VS Code の設定変更は `settings.json` ファイルを編集する形式となり、非常に簡単な操作で動作を設定することが可能です。
-ユーザーが使用可能な設定を見つけるために、**Default Settings** を別のエディタで表示し、グローバルまたはワークスペース設定をもう1つのエディタで開き、IntelliSense による設定を行ってきました。
+VS Code の設定変更は `settings.json` ファイルを編集する形式となり、非常に簡単な操作で動作を設定することが可能です。ユーザーが使用可能な設定を見つけるために、**既定の設定** を別のエディタで表示し、グローバルまたはワークスペース設定をもう1つのエディタで開き、IntelliSense による設定を行ってきました。
+
 しかし、ユーザーからのフィードバックとユーザビリティの調査から、この方法は問題であることが判明しました。
 
 今回のリリースでは、設定項目を探す方法の可能性とユーザーエクスペリエンスを向上させるためのいくつかの調査を行った結果、次のような改善をしました。
 
 ### 設定の検索 (Search settings)
 
-**Default Settings** を表示する大きな理由の1つは、ユーザーが設定を検索及び検出するためです。これを容易にするために、設定を検索できる大きな検索バーを追加しました。検索に一致する設定の強調表示に加えて、一致しない設定を除外します。これにより、設定を素早く簡単に見つけることができます。<!--text lint無視-->
+**既定の設定** を表示する大きな理由の1つは、ユーザーが設定を検索及び検出するためです。これを容易にするために、設定を検索できる大きな検索バーを追加しました。検索に一致する設定の強調表示に加えて、一致しない設定を除外します。これにより、設定を素早く簡単に見つけることができます。<!--text lint無視-->
 
 ![Search Settings](https://code.visualstudio.com/images/1_8_search-settings.gif)
 
 ### 設定グループ (Settings groups)
 
-**Default Settings** グループの視覚的表現を強化し、設定のナビゲーションをより使いやすくしました。また、`最もよく利用するもの`を表示するグループを追加しました。
+**既定の設定** グループの視覚的表現を強化し、設定のナビゲーションをより使いやすくしました。また、`最もよく利用するもの`を表示するグループを追加しました。
 
 ![Settings Groups](https://code.visualstudio.com/images/1_8_settings-groups.png)
 
 ### クイックエディット (Quick Edit)
 
-**Default Settings** と `settings.json` エディタ内で、設定をすばやくコピーまたは更新するのに役立つアクションを導入しました。あらかじめ選択可能な値を持っている項目については、値をキーボードから入力することなく選択で入力することが可能です。
+**既定の設定** と `settings.json` エディタ内で、設定をすばやくコピーまたは更新するのに役立つアクションを導入しました。あらかじめ選択可能な値を持っている項目については、値をキーボードから入力することなく選択で入力することが可能です。
 
 ![Settings Groups](https://code.visualstudio.com/images/1_8_quick-edit-settings.gif)
 
 ### 設定エディタのグループ化 (One Side by Side Settings editor)
 
-紹介が最後になりましたが、これも重要な改善になります。 **Default Settings** と `settings.json` エディタをサイドエディタでグループ化することにより、2つの設定用エディタを個別に管理しなければならなかった問題に対処しました。
+紹介が最後になりましたが、これも重要な改善になります。 **既定の設定** と `settings.json` エディタをサイドエディタでグループ化することにより、2つの設定用エディタを個別に管理しなければならなかった問題に対処しました。
 
 エディタには様々な改善が続けられて行きます...次のリリース計画に注目してくださいね
 
@@ -142,7 +142,7 @@ VS Code の設定変更は `settings.json` ファイルを編集する形式と�
 
 ### キーバインディングコマンドの引数 (Key binding command arguments)
 
-`keybindings.json` 設定ファイルにて、引数を持つコマンドを呼び出すためのサポートが追加されました。これは、特定のファイルやフォルダに対して同じ操作を繰り返し実行する場合などに便利な機能となります。カスタムキーボードショートカットを追加するだけで、必要な操作を正確に実行できます。
+`keybindings.json` 設定ファイルにて、引数を持つコマンドを呼び出すためのサポートを追加しました。これは、特定のファイルやフォルダに対して同じ操作を繰り返し実行する場合などに便利な機能となります。カスタムキーボードショートカットを追加するだけで、必要な操作を正確に実行できます。
 
 以下は、`kbstyle(Enter)` の入力によりテキスト `Hello World` を表示するように、既存の `kbstyle(Enter)` キーを上書きする例です：
 
@@ -172,7 +172,7 @@ VS Code の設定変更は `settings.json` ファイルを編集する形式と�
 
 ### テキスト検索のパフォーマンス向上 (Text search performance)
 
-複数のプロセスで検索コードを並行して実行することにより、フルテキスト検索の[パフォーマンス](https://github.com/Microsoft/vscode/issues/15384)を向上させました。 特に大規模なワークスペースでは、検索がより高速に完了するはずです。
+複数のプロセスで検索コードを並行して実行することにより、フルテキスト検索の[パフォーマンス](https://github.com/Microsoft/vscode/issues/15384)を向上しました。 特に大規模なワークスペースでは、検索がより高速に完了するはずです。
 
 ### Git clone
 
@@ -183,7 +183,7 @@ Git リポジトリをクローンし、VS Code で開くための新しいコ�
 * `window.showFullPath` - ウィンドウタイトルに、ワークスペースの相対パスではなく、開いているファイルのフルパスを表示します
 * `files.insertFinalNewline` - ファイル保存時、ファイルの最後に改行を自動的に追加します
 
-`editor.renderLineHighlight` 設定に新しいオプションが追加されました:
+`editor.renderLineHighlight` 設定に新しいオプションを追加しました:
 
 * `line` - エディタで現在の行をハイライト表示する
 * `gutter` - 現在の行の左側にあるガターの行番号をハイライト表示する
@@ -237,7 +237,8 @@ Sublime Text ユーザーがよく利用する 4 つの新しいコマンドを�
 
 ### JSON スキーマのスニペット (Snippets in JSON schemas)
 
-JSON 言語サービスでは、JSON スキーマを使用して JSON ドキュメントの検証と補完を行います。JSON スキーマにおける VS Code 固有の拡張機能として、より利便性を向上させるためにスキーマにスニペットの提案を指定できるようになりました。スニペットの提案は追加の補完提案として表示され、スニペット構文を使用してプレースホルダを指定します。
+JSON 言語サービスでは、JSON スキーマを使用して JSON ドキュメントの検証と補完を行います。JSON スキーマにおける。VS Code 固有機能で、利便性を向上するためにスキーマへのスニペット提案を指定できるようになりました。スニペットの提案は追加の補完提案として表示され、スニペット構文を使用してプレースホルダを指定します。
+
 詳細については、[JSON ドキュメント](https://code.visualstudio.com/docs/languages/json#_json-schemas-settings)を参照してください。
 
 ## Languages
@@ -252,7 +253,7 @@ HTML に埋め込まれた JavaScript のコーディング支援機能が復活
 
 CSS 言語サポートでは、新しい [@apply ルール](https://tabatkins.github.io/specs/css-apply-rule/) を処理できるようになりました。
 
-特に属性で定義されたスタイルを持つ HTML での CSS サポートが改善されました。
+特に属性で定義されたスタイルを持つ HTML での CSS サポートを改善しました。
 
 ![CSS in HTML attributes](https://code.visualstudio.com/images/1_8_css-in-html.png)
 
@@ -274,7 +275,7 @@ Markdown プレビューを改善するためのいくつかの新しい設定�
 
 * `markdown.previewFrontMatter` - デフォルトの動作として、Markdown プレビュー時に YAML front matter セクションを隠すようになりました。YAML front matter もあわせてプレビュー上で確認したい場合は `show` に設定してください
 
-Markdown プレビューで使用されるフォントファミリ、サイズ、行の高さを制御します。
+Markdown プレビューで使用するフォントファミリ、サイズ、行の高さを制御します。
 
 * `markdown.preview.fontFamily`
 * `markdown.preview.fontSize`
@@ -284,13 +285,13 @@ Markdown プレビューで使用されるフォントファミリ、サイズ�
 
 #### vscode-tslint
 
-vscode-tslint 拡張機能が [TSLint 4.0](https://palantir.github.io/tslint/2016/11/17/new-for-4.0.html) をサポートしました。TSLint 4.0 では、警告関するクイックフィックスや JavaScript ファイルのリンティングのサポートが追加されています。さらに、`vscode-tslint` では、次の行の TSLint ルールを無効にするためのクイックフィックスを追加します。 TSLint のアップデート詳細については [CHANGELOG](https://github.com/Microsoft/vscode-tslint/blob/master/tslint/CHANGELOG.md) を参照してください。
+vscode-tslint 拡張機能が [TSLint 4.0](https://palantir.github.io/tslint/2016/11/17/new-for-4.0.html) をサポートしました。TSLint 4.0 では、警告関するクイックフィックスや JavaScript ファイルのリンティングのサポートが追加されています。さらに、`vscode-tslint` で、次の行の TSLint ルールを無効にするためのクイックフィックスを追加しました。 TSLint のアップデート詳細については [CHANGELOG](https://github.com/Microsoft/vscode-tslint/blob/master/tslint/CHANGELOG.md) を参照してください。
 
 #### vscode-eslint
 
-`vscode-eslint` 拡張機能は、JavaScript 以外のファイルタイプの検証をサポートしました。この機能を有効にするには、次の操作が必要です:
+`vscode-eslint` 拡張機能は、JavaScript 以外のファイルタイプの検証をサポートしました。この機能を有効化するには、次の操作が必要です:
 
-- 検証を有効にするには、追加のプラグインを使用して ESLint を設定する必要があります。たとえば、HTML ファイルを検証するには、まず、`npm install eslint-plugin-html` を実行し、`eslint-plugin-html` インストールします。その後、eslint 設定ファイル (.eslintrc.jsonファイル) に `"plugin": [ "html" ]` を追加します
+- 検証を有効化するには、追加のプラグインを使用して ESLint を設定する必要があります。たとえば、HTML ファイルを検証するには、まず、`npm install eslint-plugin-html` を実行し、`eslint-plugin-html` インストールします。その後、eslint 設定ファイル (.eslintrc.jsonファイル) に `"plugin": [ "html" ]` を追加します
 - さらに、対応する言語識別子を `"eslint.validate": [ "javascript", "javascriptreact", "html" ]` のように `eslint.validate` 設定に追加します。この設定がされない場合のデフォルト値は `["javascript", "javascriptreact"]` となります。
 
 ## デバッグ (Debugging)
@@ -607,8 +608,3 @@ Key|Command|Command id
 * [Peter Burns (@rictic)](https://github.com/rictic):
   * Fully support parsing Custom Property values [PR #11](https://github.com/Microsoft/vscode-css-languageservice/pull/11)
   * Add support for parsing @apply rules. [PR #10](https://github.com/Microsoft/vscode-css-languageservice/pull/10)
-
-
-<!-- In-product release notes styles.  Do not modify without also modifying regex in gulpfile.common.js -->
-<a id="scroll-to-top" role="button" aria-label="scroll to top" onclick="scroll(0,0)"><span class="icon"></span></a>
-<link rel="stylesheet" type="text/css" href="css/inproduct_releasenotes.css"/>
