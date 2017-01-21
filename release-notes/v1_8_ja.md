@@ -2,7 +2,7 @@
 
 ## 1.8.1 Recovery Build
 
-年末までにいくつかの[重要な問題](https://github.com/Microsoft/vscode/issues?q=is%3Aissue+milestone%3A%22November+Recovery+2016%22+is%3Aclosed)へ取り組むために、1.8.1 リカバリビルドをリリースしました。 早期に問題発見いただきありがとうございました。
+年末までにいくつかの[重要な問題](https://github.com/Microsoft/vscode/issues?q=is%3Aissue+milestone%3A%22November+Recovery+2016%22+is%3Aclosed)へ取り組むために 1.8.1 リカバリビルドをリリースしました。 早期に問題発見いただきありがとうございました。
 
 * Fixed scrolling in large minified files ([#17208](https://github.com/Microsoft/vscode/issues/17208))
 * Resolved an issue with Copy command in certain contexts ([#17232](https://github.com/Microsoft/vscode/issues/17232))
@@ -36,7 +36,7 @@ VS Code の重要な更新に関連するアップデート情報は、リリー
 * **[Settings](#settings)** - 設定項目の検索、値編集の簡易化、キーマップ拡張機能の検索
 * **[Editor](#editor)** - Git Clone(command)、新しいエディタ設定、Sublime Text 機能との互換性
 * **[Languages](#languages)** - CSS apply 、Markdown プレビューのカスタマイズ、TSLint と ESLint 拡張機能をアップデート
-* **[Debugging](#debugging)** - IntelliSense 介して簡単に launch configurations 設定
+* **[Debugging](#debugging)** - IntelliSense を介して簡単に launch configurations 設定
 * **[Node.js Debugging](#node-debugging)** - Just-My-Code、ファイルから環境変数を読み込み、sourcemap のヘルプ
 * **[Extension Authoring](#extension-authoring)** - 厳密な Null チェック、スニペット補完、デバッガ拡張機能の更新
 
@@ -44,13 +44,13 @@ VS Code の重要な更新に関連するアップデート情報は、リリー
 
 ### Hot Exit
 
-`Hot Exit` という機能を新たに追加しました。 VS Code は、以下の時に未保存の変更を記憶します。
+`Hot Exit` という機能を新たに追加しました。 VS Code は以下の時に未保存の変更を記憶します。
 
 - すべてのウィンドウ (インスタンス) が閉じられたとき
 - Mac 上で、アプリケーションを終了したとき
 - ウィンドウの再読み込みを行ったとき (拡張機能の更新時、未保存を気にする必要がありません)
 
-Hot Exit 後に VS Code を次に起動すると、バックアップされたすべてのワークスペースおよびファイルがリストアされます。 Hot Exitの有効-無効 (`files.hotExit` 設定) に関係なく、VS Code がクラッシュした場合にファイルを復元する機能もあります。Hot Exit の実装や背景および将来の予定などについては、[ブログの記事](http://code.visualstudio.com/blogs/2016/11/30/hot-exit-in-insiders)を参照してください。
+Hot Exit 後に VS Code を次に起動すると、バックアップされたすべてのワークスペースおよびファイルがリストアされます。 Hot Exitの有効/無効 (`files.hotExit` 設定) に関係なく、VS Code がクラッシュした場合にファイルを復元する機能もあります。Hot Exit の実装や背景および将来の予定などについては、[ブログの記事](http://code.visualstudio.com/blogs/2016/11/30/hot-exit-in-insiders)を参照してください。
 
 ### ビューピッカー (View Picker)
 
@@ -64,7 +64,7 @@ Windows と Mac では、`kbstyle(Ctrl+Q)` を押すとピッカーを表示し�
 
 ### 統合ターミナルの改善 (Terminal improvements)
 
-統合ターミナルにいくつかの改良が行われました:
+統合ターミナルにいくつかの改良を行いました:
 
 - Windows におけるターミナル上でのコピーと貼り付けのキーバインディングは、それぞれ `kbstyle(Ctrl+C)`（テキストを選択している場合） `kbstyle(Ctrl+V)` に変更されました
 - スクロールアップさせている際、ターミナルが出力を受け取っても最下部にスクロールしなくなりました
@@ -73,7 +73,7 @@ Windows と Mac では、`kbstyle(Ctrl+Q)` を押すとピッカーを表示し�
 
 ### Mac: タイトルバーにもテーマを反映 (Mac: Custom themed title)
 
-macOS 版の VS Code で、テーマのカラーをタイトルバーにも反映できるように、独自のカスタムタイトルバーを内部的に生成するようになりました。この動作は新しい `window.titleBarStyle` 設定で変更することができます。デフォルトは `custom` が設定されていますが、値を `native` に設定し再起動することで従来と同じタイトルバーに変更することができます。
+macOS 版の VS Code ではテーマのカラーをタイトルバーにも反映できるように、独自のカスタムタイトルバーを内部的に生成するようになりました。この動作は新しい `window.titleBarStyle` 設定で変更することができます。デフォルトは `custom` が設定されていますが、値を `native` に設定し再起動することで従来と同じタイトルバーに変更することができます。
 
 ## コードに集中するための機能 (Focus on your code)
 
@@ -116,7 +116,7 @@ VS Code の設定変更は `settings.json` ファイルを編集する形式と�
 
 ### 設定の検索 (Search settings)
 
-**既定の設定** を表示する大きな理由の1つは、ユーザーが設定を検索及び検出するためです。これを容易にするために、設定を検索できる大きな検索バーを追加しました。検索に一致する設定の強調表示に加えて、一致しない設定を除外します。これにより、設定を素早く簡単に見つけることができます。<!--text lint無視-->
+**既定の設定** を表示する大きな理由の1つは、ユーザーが設定を検索及び検出するためです。これを容易にするため、設定を検索できる大きな検索バーを追加しました。検索に一致する設定の強調表示に加えて、一致しない設定を除外します。これにより、設定を素早く簡単に見つけることができます。
 
 ![Search Settings](https://code.visualstudio.com/images/1_8_search-settings.gif)
 
@@ -166,7 +166,7 @@ VS Code の設定変更は `settings.json` ファイルを編集する形式と�
 
 ### 選択範囲メニューの追加 (Selection menu)
 
-メニューバーに **[選択範囲(S)]** メニューを追加し、良く利用される選択操作と複数選択操作に容易にアクセスできるようになりました。 <!--text lint無視-->
+メニューバーに **[選択範囲(S)]** メニューを追加し、良く利用される選択操作を追加し容易にアクセスできるようになりました。
 
 ![Selection menu](https://code.visualstudio.com/images/1_8_selection-menu.png)
 
@@ -237,9 +237,8 @@ Sublime Text ユーザーがよく利用する 4 つの新しいコマンドを�
 
 ### JSON スキーマのスニペット (Snippets in JSON schemas)
 
-JSON 言語サービスでは、JSON スキーマを使用して JSON ドキュメントの検証と補完を行います。JSON スキーマにおける。VS Code 固有機能で、利便性を向上するためにスキーマへのスニペット提案を指定できるようになりました。スニペットの提案は追加の補完提案として表示され、スニペット構文を使用してプレースホルダを指定します。
-
-詳細については、[JSON ドキュメント](https://code.visualstudio.com/docs/languages/json#_json-schemas-settings)を参照してください。
+**JSON 言語サービスでは、JSON スキーマを使用して JSON ドキュメントの検証と補完を行います。JSON スキーマにおける VS Code 固有の拡張機能として、より利便性を向上させるためにスキーマにスニペットの提案を指定できるようになりました。スニペットの提案は追加の補完提案として表示され、スニペット構文を使用してプレースホルダを指定します。
+**詳細については、[JSON ドキュメント](https://code.visualstudio.com/docs/languages/json#_json-schemas-settings)を参照してください。
 
 ## Languages
 
@@ -285,7 +284,7 @@ Markdown プレビューで使用するフォントファミリ、サイズ、�
 
 #### vscode-tslint
 
-vscode-tslint 拡張機能が [TSLint 4.0](https://palantir.github.io/tslint/2016/11/17/new-for-4.0.html) をサポートしました。TSLint 4.0 では、警告関するクイックフィックスや JavaScript ファイルのリンティングのサポートが追加されています。さらに、`vscode-tslint` で、次の行の TSLint ルールを無効にするためのクイックフィックスを追加しました。 TSLint のアップデート詳細については [CHANGELOG](https://github.com/Microsoft/vscode-tslint/blob/master/tslint/CHANGELOG.md) を参照してください。
+vscode-tslint 拡張機能が [TSLint 4.0](https://palantir.github.io/tslint/2016/11/17/new-for-4.0.html) をサポートしました。TSLint 4.0 では、警告関するクイックフィックスや JavaScript ファイルのリンティングのサポートが追加されています。さらに、`vscode-tslint` では、次の行の TSLint ルールを無効にするためのクイックフィックスを追加します。 TSLint のアップデート詳細については [CHANGELOG](https://github.com/Microsoft/vscode-tslint/blob/master/tslint/CHANGELOG.md) を参照してください。
 
 #### vscode-eslint
 
@@ -298,7 +297,7 @@ vscode-tslint 拡張機能が [TSLint 4.0](https://palantir.github.io/tslint/201
 
 ### マルチターゲットデバッグ (Multitarget debugging)
 
-マルチターゲットデバッグは、以前のマイルストーンで実装されました。今回のマイルストーンでは、新たにユーザインタフェースを追加し、マルチターゲットデバッグはもはや実験的な機能ではなくなりました。
+マルチターゲットデバッグは、すでに実験的に追加されていました。今回のマイルストーンでは新たにユーザインタフェースを追加し、マルチターゲットデバッグはもはや実験的な機能ではなくなりました。
 
 マルチターゲットデバッグの使用は非常に簡単です: 最初のデバッグセッションを開始した後、別のセッションの起動をブロックすることはなくなり、2 つ目のセッションを起動することで UI が _multi-target mode_ に切り替わります:
 
@@ -350,7 +349,7 @@ IntelliSense によるスニペットの呼び出しは、カーソルが `confi
 
 インストールされたすべてのデバッグ拡張機能で提供される起動設定スニペットが IntelliSense により一覧表示されます。これにより、さまざまなデバッガ (Chrome や Node など)の起動設定を 1 つの `launch.json` として簡単に組み合わせることが可能になります。
 
-デバッグ拡張機能は、この新機能の採用を選択する必要があり、すべてのデバッガがこの機能を利用できるまでは、しばらく時間を必要とします。VS Code 11月 リリースでは、ビルトインの Node.js デバッガだけが利用可能です。
+デバッグ拡張機能はこの新機能を採用する必要があり、すべてのデバッガがこの機能を利用できるまでしばらく時間を必要とします。VS Code 11月 リリースでは、ビルトインの Node.js デバッガだけが利用可能です。
 
 ### 洗練されたいくつかのユーザインタフェース (Some UI Polish)
 
